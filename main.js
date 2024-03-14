@@ -1,11 +1,6 @@
 let draw = document.getElementById('draw').getContext('2d')
 
-// let carro = new Carro(225,600,50,80,'darkblue')
-let ship = new Ship1(225,580,45,100)
-// let c2 = new Carro2(400,-40,50,80,'orange')
-let ship2 = new Ship2(400,-40,45,100)
-// let c3 = new Carro2(200,-280,50,80,'red')
-let ship3 = new Ship3(200,-280,45,100)
+let ship = new Ship(225,580,45,100)
 let sp = new Space(2,2,10,696,'yellow')
 
 let t1 = new Text()
@@ -25,16 +20,16 @@ let play = true
 document.addEventListener('keydown',(e)=>{
     // console.log(e.key)
     if(e.key === 'a'){
-        carro.dir -= 5
+        ship.dir -= 5
     }else if(e.key === 'd'){
-        carro.dir += 5
+        ship.dir += 5
     }
 })
 document.addEventListener('keyup', (e)=>{
     if(e.key === 'a'){
-        carro.dir = 0
+        ship.dir = 0
     }else if(e.key === 'd'){
-        carro.dir = 0
+        ship.dir = 0
     }
 })
 
@@ -113,7 +108,7 @@ function atualiza(){
 
 }
 function main(){
-    des.clearRect(0,0,500,700)
+    des.clearRect(0,0,500,607)
     desenha()
     atualiza()
 }
